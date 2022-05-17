@@ -1,6 +1,6 @@
 # Prediction-of-heart-attack-risk
 
-
+The python scripts are tested and run on Spyder (Python 3.8).
 
 This file aimed to predict the risk of herat attack using classification model.
 Thefile for training purposes is named as heart.attack.py
@@ -15,5 +15,5 @@ Classification report and the confusion matrix of the relevant model can be foun
 A screenshot of the interface of application built by streamlit also can be found in this folder.
 
 In order to run the deployment files, you will need to run with two pickle files included
-Best model is saved as best_model_forest.pkl and the Min MAx Scaler involved also uploaded as mms.pkl
+Best model is saved as best_model_forest.pkl and the Min Max Scaler involved also uploaded as mms.pkl
 
