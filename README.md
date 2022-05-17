@@ -8,7 +8,7 @@
 
 ### DATA SOURCE:
 Original sources of the data can be found in the link below:
-<br>[Link to Website](https://www.kaggle.com/rashikrahmanpritom/heart-attack-analysis-prediction-dataset)
+<br>[Heart Attack Analysis & Prediction Dataset](https://www.kaggle.com/rashikrahmanpritom/heart-attack-analysis-prediction-dataset)
 <br>Thanks to the data contributor: Mr.Rashik Rahman
 
 ### FOLDERS UPLOADED:
