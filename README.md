@@ -14,13 +14,13 @@ Original sources of the data can be found in the link below:
 ### FOLDERS UPLOADED:
 Main folder named heart_attack can be found at the repository page.
 <br>The content of folder is listed as below
-<br>*Italic*Main folder*Italic*: consist of data folder, figure folder, python and pickle files
-<br>Data folder: raw data
-<br>Figures folder: classification report,confusion matrix of the best model and the interface of the application
-<br>heart.attack.py: training file
-<br>heart_attack_deploy.py: deployment file.
-<br>best_model_forest.pkl : best model saved to the file
-<br>mms.pkl: MinMaxScaler saved to the file
+<br>*Main folder*: consist of data folder, figure folder, python and pickle files
+<br>*Data folder*: raw data
+<br>*Figures folder*: classification report,confusion matrix of the best model and the interface of the application
+<br>*heart.attack.py*: training file
+<br>*heart_attack_deploy.py*: deployment file.
+<br>*best_model_forest.pkl*: best model saved to the file
+<br>*mms.pkl*: MinMaxScaler saved to the file
 <br>Deployment file is required to run with the two pickle files saved. 
 
 ### ABOUT THE MODEL:
