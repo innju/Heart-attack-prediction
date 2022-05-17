@@ -10,7 +10,7 @@ Data folder stored the raw data for this analysis.
 Original sources of the data can be found in the link below:
 https://www.kaggle.com/rashikrahmanpritom/heart-attack-analysis-prediction-dataset
 
-Best model identified for this analysis is the random forest, with accuracy of 95%.
+Best model identified for this analysis is the random forest, with accuracy of 75%.
 Classification report and the confusion matrix of the relevant model can be found in the folder named figures.
 A screenshot of the interface of application built by streamlit also can be found in this folder.
 
