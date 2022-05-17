@@ -32,8 +32,8 @@ Main folder named heart_attack can be found at the repository page.
 <br>Then, machine pipelines is used to compare between decision tree and random forest model.
 <br>Best model identified for this analysis is the **random forest model**, with **accuracy of 75%**.
 
-### VIEW THE APP
-If you have anaconda installed to your device, you can view the application by follow the steps below:
+### VIEW THE APP:
+If you have anaconda installed on your device, you can view the application by follow the steps below:
 <br>Open Anaconda prompt > conda activate (name of ur environment) > cd (main folder path) > streamlit run (file name for deployment)
 <br>Outcome of the app is either low risk or risky.
 
