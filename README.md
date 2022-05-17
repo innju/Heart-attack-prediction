@@ -7,12 +7,12 @@
 <br>The python scripts are tested and run on Spyder (Python 3.8).
 
 ## DATA SOURCE:
-<br>Original sources of the data can be found in the link below:
+Original sources of the data can be found in the link below:
 <br>https://www.kaggle.com/rashikrahmanpritom/heart-attack-analysis-prediction-dataset
 <br>Thanks to the data contributor: Mr.Rashik Rahman
 
 ## FOLDERS UPLOADED:
-<br>Main folder named heart_attack can be found at the repository page.
+Main folder named heart_attack can be found at the repository page.
 <br>Click to see another two folders inside it, which are data and figures.
 <br>Data folder stored the raw data for this analysis.
 <br>Figures folder stored the figure of classification report,confusion matrix of the best model and the screenshot of the interface of the application built.
@@ -21,7 +21,7 @@
 <br>Best model is saved as best_model_forest.pkl and the Min Max Scaler involved also uploaded as mms.pkl
 
 ## ABOUT THE MODEL:
-<br>Extra tree classifier served the purpose of feature selection.
+Extra tree classifier served the purpose of feature selection.
 <br>It select the six features out of thirteen features given, which are 'cp','thalachh','exng','oldpeak','caa', and 'thall', 
 <br>with the value of feature importances calculated.
 <br>Then, machine pipelines is used to compare between decision tree and random forest model.
