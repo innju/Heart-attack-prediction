@@ -14,7 +14,7 @@ Original sources of the data can be found in the link below:
 ### FOLDERS UPLOADED:
 Main folder named heart_attack can be found at the repository page.
 <br>The content of folder is listed as below
-<br>Main folder: consist of data folder, figure folder, python and pickle files
+<br>*Italic*Main folder*Italic*: consist of data folder, figure folder, python and pickle files
 <br>Data folder: raw data
 <br>Figures folder: classification report,confusion matrix of the best model and the interface of the application
 <br>heart.attack.py: training file
@@ -32,7 +32,7 @@ Extra tree classifier served the purpose of feature selection.
 <br>Best model identified for this analysis is the random forest model, with accuracy of 75%.
 
 ### VIEW THE APP
-<br>If you have anaconda installed to your device, you can view the application by follow the steps below:
+If you have anaconda installed to your device, you can view the application by follow the steps below:
 <br>Open Anaconda prompt > conda activate (name of ur environment) > cd (main folder path) > streamlit run (file name for deployment)
 <br>Outcome of the app is either low risk or risky.
 
