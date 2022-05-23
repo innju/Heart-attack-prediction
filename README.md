@@ -14,7 +14,7 @@ Original sources of the data can be found in the link below:
 ### FOLDERS UPLOADED:
 Main folder named heart_attack can be found at the repository page.
 <br>The content of folder is listed as below:
-<br>**Main folder**: consist of data folder, figure folder, python and pickle files
+<br>**heart attack folder**: Main folder consist of data folder, figure folder, python and pickle files
 <br>**Data folder**: raw data
 <br>**Figures folder**: classification report,confusion matrix of the best model and the interface of the application
 <br>**heart.attack.py**: training file
@@ -32,9 +32,21 @@ Main folder named heart_attack can be found at the repository page.
 <br>Then, machine pipelines is used to compare between decision tree and random forest model.
 <br>Best model identified for this analysis is the **random forest model**, with **accuracy of 75%**.
 
+![Image](https://github.com/innju/Heart-attack-prediction/blob/main/heart_attack/figures/classification_report_random_forest.png)
+
+The precision calculated for class 0 and class 1 is 0.80 and 0.75 respectively. The class 0 refer to category with low risk to get heart attack while class 1 refer to category with high risk to get heart attack. High precision indicates high number of data predicted positive and it's true. Recall also should be high to indicates the number of data predicted correctly out from all the positive classes.The recall calculated for class 0 and class 1 is 0.69 and 0.84 respectively. 
+
+![Image](https://github.com/innju/Heart-attack-prediction/blob/main/heart_attack/figures/confusion_matrix_random_forest.png)
+
+
 ### VIEW THE APP:
 If you have anaconda installed on your device, you can view the application by follow the steps below:
 <br>Open Anaconda prompt > conda activate (name of ur environment) > cd (main folder path) > streamlit run (file name for deployment)
 <br>Outcome of the app is either low risk or risky.
+<br>The interface of the app is shown as below:
+
+![Image](https://github.com/innju/Heart-attack-prediction/blob/main/heart_attack/figures/streamlit_app.png)
+
+
 
 <br>Thanks for reading.
