@@ -31,11 +31,11 @@ Main folder named heart_attack can be found at the repository page.
 <br>Then, machine pipelines is used to compare between decision tree and random forest model.
 <br>Best model identified for this analysis is the **random forest model**, with **accuracy of 75%**.
 
-![Image](https://github.com/innju/Heart-attack-prediction/blob/main/heart_attack/figures/classification_report_random_forest.png)
+![Image](
 
 The precision calculated for class 0 and class 1 is 0.77 and 0.74 respectively. The class 0 refer to category with low risk to get heart attack while class 1 refer to category with high risk to get heart attack. High precision indicates high number of data predicted positive and it's true. Recall also should be high to indicates the number of data predicted correctly out from all the positive classes.The recall calculated for class 0 and class 1 is 0.69 and 0.81 respectively. 
 
-![Image](https://github.com/innju/Heart-attack-prediction/blob/main/heart_attack/figures/confusion_matrix_random_forest.png)
+![Image](
 
 
 ### VIEW THE APP:
