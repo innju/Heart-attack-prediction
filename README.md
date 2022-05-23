@@ -33,7 +33,7 @@ Main folder named heart_attack can be found at the repository page.
 
 ![Image](https://github.com/innju/Heart-attack-prediction/blob/main/heart_attack/figures/classification_report_random_forest.png)
 
-The precision calculated for class 0 and class 1 is 0.80 and 0.75 respectively. The class 0 refer to category with low risk to get heart attack while class 1 refer to category with high risk to get heart attack. High precision indicates high number of data predicted positive and it's true. Recall also should be high to indicates the number of data predicted correctly out from all the positive classes.The recall calculated for class 0 and class 1 is 0.69 and 0.84 respectively. 
+The precision calculated for class 0 and class 1 is 0.77 and 0.74 respectively. The class 0 refer to category with low risk to get heart attack while class 1 refer to category with high risk to get heart attack. High precision indicates high number of data predicted positive and it's true. Recall also should be high to indicates the number of data predicted correctly out from all the positive classes.The recall calculated for class 0 and class 1 is 0.69 and 0.81 respectively. 
 
 ![Image](https://github.com/innju/Heart-attack-prediction/blob/main/heart_attack/figures/confusion_matrix_random_forest.png)
 
