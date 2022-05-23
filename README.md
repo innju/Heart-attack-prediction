@@ -21,8 +21,7 @@ Main folder named heart_attack can be found at the repository page.
 <br>**heart_attack_deploy.py**: deployment file.
 <br>**best_model_forest.pkl**: best model saved to the file
 <br>**mms.pkl**: MinMaxScaler saved to the file
-
-<br>Deployment file is required to run with the two pickle files saved. 
+<br>Deployment file is required to run with the two pickle files saved in order to load the model and scale the new data input.
 
 ### ABOUT THE MODEL:
 **Extra tree classifier** served the purpose of **feature selection**.
@@ -47,6 +46,6 @@ If you have anaconda installed on your device, you can view the application by f
 
 ![Image](https://github.com/innju/Heart-attack-prediction/blob/main/heart_attack/figures/streamlit_app.png)
 
-
+Based on the input data, it is able to predict the outcome whether the user has low or high risk of heart attack.
 
 <br>Thanks for reading.
