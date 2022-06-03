@@ -104,18 +104,6 @@ pipe_dict = {0:'Tree', 1:'Forest'}
 
 #%% Performance evaluation
 # find out the best model
-best_accuracy = 0.0
-best_pipeline = ''
-
-# for loop to determine the score for each pipeline
-for i, model in enumerate(pipelines):
-    if model.score(X_test,y_test) > best_accuracy:
-        best_accuracy = model.score(X_test,y_test)
-        best_pipeline = pipe_dict[i]
-        
-print('Best model is {} with accuracy of {}'.format(pipe_dict[i],best_accuracy))
-#Best model is Forest with accuracy of 0.75
-
 # to view the classification report and confusion matrix of both model
 for i,model in enumerate(pipelines):
     y_pred = model.predict(X_test)
