@@ -41,10 +41,8 @@ with st.form('Predicition for risk of heart attack'):
         patient_info = np.array([cp,thalachh,exng,oldpeak,caa,thall])
         patient_info_scaled= scaler.transform(np.expand_dims(patient_info,axis=0))
         outcome = model.predict(patient_info_scaled)
-        heart_attack_chance ={0:'low risk',1:'risky'}
-        st.write(heart_attack_chance[np.argmax(outcome)])
         
-        if np.argmax(outcome) == 1:
+        if outcome == 1:
             st.warning('You have high risk for heart attack!')
         else:
             st.success('You have low risk for heart attack!')
