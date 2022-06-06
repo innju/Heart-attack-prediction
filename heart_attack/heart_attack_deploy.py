@@ -16,7 +16,7 @@ import numpy as np
 #%% static code
 # load path consisting of data
 SCALER_SAVE_PATH = os.path.join(os.getcwd(),'mms.pkl')
-MODEL_SAVE_PATH = os.path.join(os.getcwd(),'best_model_forest.pkl')
+MODEL_SAVE_PATH = os.path.join(os.getcwd(),'best_model_SVM.pkl')
 
 #%% 1) Load model and scaler
 scaler = pickle.load(open(SCALER_SAVE_PATH,'rb'))

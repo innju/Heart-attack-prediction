@@ -22,13 +22,15 @@ from sklearn.metrics import classification_report,confusion_matrix
 import pickle
 from sklearn.metrics import plot_confusion_matrix
 import matplotlib.pyplot as plt
+from sklearn import svm
+from sklearn.naive_bayes import GaussianNB
 
 #%% Static code
 LOAD_DATA_PATH = os.path.join(os.getcwd() ,'data','heart.csv') 
 #load data from folder named "data"
 SCALER_SAVE_PATH = os.path.join(os.getcwd(),'mms_scaler.pkl')
 # save scaler path
-MODEL_SAVE_PATH = os.path.join(os.getcwd(),'best_model_forest.pkl')
+MODEL_SAVE_PATH = os.path.join(os.getcwd(),'best_model_SVM.pkl')
 # save model path
 
 #%% EDA
@@ -76,53 +78,56 @@ print(feature_name)
 X_input = df[['cp', 'thalachh', 'exng', 'oldpeak', 'caa', 'thall']]
 y = df['output']
 
-X_train, X_test, y_train,y_test = train_test_split(X_input,y, test_size=0.2, random_state=1)
-
 mms = MinMaxScaler()
-x_train= mms.fit_transform(X_train)
-x_test= mms.transform(X_test)
+X_input= mms.fit_transform(X_input)
 # save scaler pickle file
 mms_scaler='mms.pkl'
 pickle.dump(mms,open(mms_scaler,'wb'))
 
+X_train, X_test, y_train,y_test = train_test_split(X_input,y, test_size=0.3)
+
+
 #%% Machine Learning pipeline
-# Compare between models
+# ML pipeline with different classifier
+steps_NB = [('NB',GaussianNB())]
+steps_SVM = [('SVM',svm.SVC())]
 steps_tree = [('Tree',DecisionTreeClassifier())]
 steps_forest = [('Forest',RandomForestClassifier())]
 
-# create pipeline 
-pipeline_tree = Pipeline(steps_tree) #To load the steps into the pipeline
+# create pipeline
+pipeline_NB = Pipeline(steps_NB) #To load the steps into the pipeline
+pipeline_SVM = Pipeline(steps_SVM) 
+pipeline_tree = Pipeline(steps_tree)
 pipeline_forest = Pipeline(steps_forest)
-
-pipelines= [pipeline_tree,pipeline_forest] #create a list to store all the created pipelines
+#create a list to store all the created pipelines
+pipelines= [pipeline_NB, pipeline_SVM,pipeline_tree,pipeline_forest]
 
 #fitting of data
 for pipe in pipelines:
     pipe.fit(X_train, y_train)
     
-pipe_dict = {0:'Tree', 1:'Forest'} 
+pipe_dict = {0:'NB', 1:'SVM', 2:'Tree', 3:'Forest'}
 
 #%% Performance evaluation
 # find out the best model
-# to view the classification report and confusion matrix of both model
+# view the classification report and confusion matrix of all model
 for i,model in enumerate(pipelines):
     y_pred = model.predict(X_test)
+    target_names = ['low risk', 'high risk']
     print(pipe_dict[i])
-    print(classification_report(y_test, y_pred))
+    print(classification_report(y_test, y_pred,target_names=target_names))
     print(confusion_matrix(y_test, y_pred))
 # class 0 represent low risk to get heart attack
-# RandomForest model achieves highest accuracy, 0.75
+# SVM model achieves highest accuracy, 0.87%
 # it is selected as the best model
 
 #show visualization of best model(forest) selected
-plot_confusion_matrix(pipeline_forest,X_test,y_test)
+plot_confusion_matrix(pipeline_SVM,X_test,y_test)
 plt.show()
 # based on confusion matrix, the value of true positive and true negative is high
 # means model tend to predict correctly most of the time
-# with model accuracy of 0.75
 #%% Save optimal model
-bestmodel='best_model_forest.pkl'
-pickle.dump(pipeline_forest,open(bestmodel,'wb'))
+pickle.dump(pipeline_SVM,open(MODEL_SAVE_PATH,'wb'))
 
 
 
